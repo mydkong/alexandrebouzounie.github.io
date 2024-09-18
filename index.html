@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+        <title>Accès réservé</title>
+    </head>
+    <body>
+        <h3>Identifiant : <input type="text" id="id"></h3>
+<h3>Mot de passe : <input type="password" id="pw">
+<script>
+    
+</script></h3>
+<input type="button" value="Continuer" onclick="envoyer();">
+<h3 id="link"><a></a></h3>
+<script>
+    var pwd=document.getElementById("pw");
+    var id=document.getElementById("id");
+    var link=document.getElementById("link");
+    
+    function envoyer(){
+        if(id.value=="22272037840997"&&pwd.value=="LascGERS24"){
+            window.location.href="https://us05web.zoom.us/j/7732077483?pwd=fczQi9BbEwa9nlpBKLF3SpgwURzqhj.1";
+        }else{
+            link.innerHTML=`<h3 id="link">L'identifiant et/ou le mot de passe est incorrect. Veuillez réessayer.</h3>`;
+        }
+    }
+</script></body></html>
