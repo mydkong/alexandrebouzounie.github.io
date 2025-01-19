@@ -1,18 +1,30 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Documents sur la grotte de Lascaux - TocToc</title>
+		<title>INFORUPTIBLE | Le journal</title>
 	</head>
 	<body>
-	<h1>Index de la grotte de Lascaux pour le devoir</h1>
-	<br/>
-	<br/>
-	<ul>
-		<li>
-			&compfn; <a href="https://archeologie.culture.gouv.fr/lascaux/fr/les-quatre-inventeurs" target="_blank">Les quatre-inventeurs</a></li>
-			<li>&compfn; <a href="https://archeologie.culture.gouv.fr/sculpture-prehistoire/fr/mediatheque/le-panneau-de-lhomme-blesse-de-lascaux" target="_blank">Le panneau de l'homme bless&eacute;</a></li>
-			<li>&compfn; <a href="https://archeologie.culture.gouv.fr/lascaux/fr/linventionla-decouverte" target="_blank">La d&eacute;couverte de la grotte</a></li>
-			<li>&compfn; <a href="https://archeologie.culture.gouv.fr/lascaux/fr/simon-coencas-1927-2020" target="_blank">Simon Coencas</a></li>
-	</ul>
+		<form>
+		<label for="passcode"><h1>Entrez le code INFORUPTIBLE :</h1></label>
+		<input placeholder="Entrez le code mentionné dans votre journal" id="passcode">
+		<button type="submit">Valider</button>
+		<div class="mdpb"></div>
+		</form>
+		<script type="text/javascript>
+			document.querySelector("#passcode").addEventListener("keydown", (e)=>{
+				if(e.key=="Enter"){
+					document.querySelector("button").click()
+				}
+			}
+
+			document.querySelector("button").addEventListener("click", ()=>{
+				if (document.querySelector("#passcode")==="GERSON25"){
+					document.querySelector("form").innerHTML="<iframe src="dm.pdf></iframe>";
+				else{
+					document.querySelector(".mdpb").style.color="#f00";
+					document.querySelector(".mdpb").innerHTML="Le code n'est pas bon, veuillez réessayer."
+				}
+			}
+		</script>
 	</body>
 </html>
