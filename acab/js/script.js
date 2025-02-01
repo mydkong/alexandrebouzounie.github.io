@@ -32,16 +32,54 @@ var da=0;
 var alert=true;
 var fin=true;
 const dp=document.querySelector(".dp");
+const tidp=document.querySelector(".transition-img");
 const aladiapo=(e)=>{
 	const DIAPO_NUM=e;
-    var tidp=document.querySelector(".transition-img");
+	tidp.style.display="block";
+	tidp.src=dp.src;
+	tidp.style.transition="0.5s ease";
 	dp.src=IMG_URL+String(DIAPO_NUM)+".png";
-    if(tidp.src===""){
-        tidp.style.display="none"
-    }else{
-        tidp.style.display="block"
-    }
+	tidp.style.display="none";
+	setTimeout(()=>{ tidp.style.transition="" }, 600);
 }
+
+document.addEventListener("keydown", (e)=>{
+	if(e.key="left arrow"){
+		if(--da>=0){
+			aladiapo(da);
+			if(alert){
+    	        if (dp.requestFullscreen) {
+    	            dp.requestFullscreen();
+    	        }
+			    alert=!alert;
+			}
+    	}else if(fin){
+    	    aladiapo("fin");
+    	    fin=!fin;
+    	}else{
+    	    document.exitFullscreen();
+    		window.location.reload();
+    	}
+	}else if(e.key="right arrow"){
+		if(++da<=diapos-1){
+			aladiapo(da);
+			if(alert){
+    	        if (dp.requestFullscreen) {
+    	            dp.requestFullscreen();
+    	        }
+			    alert=!alert;
+			}
+	    }else if(fin){
+	        aladiapo("fin");
+	        fin=!fin;
+	    }else{
+	        document.exitFullscreen();
+	    	window.location.reload();
+	    }
+	}else if((e.key="r")||(e.key="R")){
+		window.location.reload()
+	}
+})
 
 window.onload=()=>{
     aladiapo("db");
