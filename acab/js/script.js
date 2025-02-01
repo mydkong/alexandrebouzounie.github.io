@@ -35,11 +35,11 @@ const dp=document.querySelector(".dp");
 const tidp=document.querySelector(".transition-img");
 const aladiapo=(e)=>{
 	const DIAPO_NUM=e;
-	tidp.style.display="block";
+	tidp.hidden=false;
 	tidp.src=dp.src;
 	tidp.style.transition="0.5s ease";
 	dp.src=IMG_URL+String(DIAPO_NUM)+".png";
-	tidp.style.display="none";
+	tidp.hidden="";
 	setTimeout(()=>{ tidp.style.transition="" }, 600);
 }
 
