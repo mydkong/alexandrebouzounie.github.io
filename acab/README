@@ -24,8 +24,12 @@ Pour exécuter la présentation, double clic sur le fichier index.html. Si cela 
 Le compilateur ne prend pas en charge les présentations PowerPoint (.pptx), ni les présentations OpenOffice (.odp).
 
 Pour modifier la présentation, suivez les instructions suivantes :
+ ⋅ __Faites un fork__ !
  ⋅ Pour modifier le nombre de diapositives, modifiez le nombre présent dans le fichier texte suivant : exposeACAB/diapositives
  ⋅ Après cela, ajoutez, supprimez ou remplacez des images (voir ce tutoriel pour la conversion : https://alexandrebouzounie.github.io/) dans exposeACAB/img/dp/ (en modifiant le nombre de diapositives dans le bon fichier)
+ ⋅ __Faites un pull request__ en cliquant sur Contribute.
+
+en ligne sur https://alexandrebouzounie.github.io/acab/
 
 # Par Alexandre Bouzounie
 # De TocToc | mydkong
